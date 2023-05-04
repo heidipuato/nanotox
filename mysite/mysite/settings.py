@@ -27,6 +27,7 @@ SECRET_KEY = 'django-insecure-%@y&3ea2ebb_@-f^k%4tiv!4won07d!!xt1i$y=rww==s#e$rb
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://nanotox-production.up.railway.app','https://*.127.0.0.1']
 
 
 # Application definition
