@@ -1,0 +1,107 @@
+{% extends 'nanotest/navbar.html' %}
+{% block content %} 
+
+<br>
+<br>
+<div class="row">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <form action="result">
+      <div class="card">
+      <div class="card-header">
+        Input
+      </div>
+        <div class="card-body">
+          
+          <div class="row">
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>DDV(m<sub>e</sub>)</italic>:</label>{{ val1 }}
+            
+          </div></div>
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>DDL(m<sub>e</sub>)</italic>:</label>{{ val2 }}
+            
+          </div>
+          </div></div>
+
+          <div class="row">
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>DD<sub>&#181 1</sub>(ATO)</italic>:</label>{{ val3 }}
+            
+          </div></div>
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>DD<sub>&#181 3</sub>(POL)n<sub>s</sub></italic>:</label>{{ val4 }}
+            
+          </div></div>
+          </div>
+
+          <div class="row">
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>DDE(d<sub>m</sub>)</italic>:</label>{{ val5 }}
+            
+          </div></div>
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>DD<sub>&#181 3</sub>(VAN)t<sub>a</sub></italic>:</label>{{ val6 }}
+           
+          </div></div></div>
+
+          <div class="row">
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>DD<sub>&#181 2</sub>(ATO)t<sub>a</sub></italic>:</label>{{ val7 }}
+            
+          </div></div>
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>DG<sub>&#181 2</sub>(HYD)s<sub>c</sub></italic>:</label> {{ val8 }}
+            
+          </div></div></div>
+
+          <div class="row">
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>DG<sub>&#181 5</sub>(PSA)s<sub>c</sub></italic>:</label> {{ val9 }}
+            
+          </div></div>
+          <div class="col">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"><italic>Tox<sub>i</sub>(c<sub>j</sub>)<sub>r</sub></italic>:</label>{{ val10 }}
+            
+          </div></div></div>
+          <a href="{% url 'test' %}" class="btn btn-primary ">Test Again</a>
+        </div>
+      </div>
+      </form>
+    </div>
+
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-header">
+            Results
+          </div>
+        <div class="card-body">
+          <h5 class="card-title">Results Using XGBoost:{{ ans }} </h5>
+          <!-- <h5 class="card-title">Results ANN:{{result2}} </h5> -->
+          <table>
+            <!-- <tr>
+              <td>
+                {{val1}}
+              </td>
+              <td>
+                {{val2}}
+              </td>
+            </tr> -->
+          </table>
+          <p class="card-text"></p>
+          
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        </div>
+      </div>
+    </div>
+  </div>
+{%endblock%}

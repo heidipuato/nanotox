@@ -5,22 +5,22 @@
 <br>
 <div class="row">
     <div class="col-sm-6 mb-3 mb-sm-0">
-
+        <form action="{% url 'predict' %}" method="POST">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Input</h5>
           <p class="card-text">Fill out the needed information of nanoparticles to test for toxicity.</p>
-
+          {% csrf_token %}
           <div class="row">
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>DDV(m<sub>e</sub>)</italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val1" name="val1">
           </div></div>
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>DDL(m<sub>e</sub>)</italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val2" name="val2" >
           </div>
           </div></div>
 
@@ -28,12 +28,12 @@
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>DD<sub>&#181 1</sub>(ATO)</italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val3" name="val3" >
           </div></div>
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>DD<sub>&#181 3</sub>(POL)n<sub>s</sub></italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val4" name="val4" >
           </div></div>
           </div>
 
@@ -41,49 +41,73 @@
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>DDE(d<sub>m</sub>)</italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val5" name="val5" >
           </div></div>
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>DD<sub>&#181 3</sub>(VAN)t<sub>a</sub></italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val6" name="val6" >
           </div></div></div>
 
           <div class="row">
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>DD<sub>&#181 2</sub>(ATO)t<sub>a</sub></italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val7"  name="val7" >
           </div></div>
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>DG<sub>&#181 2</sub>(HYD)s<sub>c</sub></italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val8" name="val8" >
           </div></div></div>
 
           <div class="row">
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>DG<sub>&#181 5</sub>(PSA)s<sub>c</sub></italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val9" name="val9" >
           </div></div>
           <div class="col">
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label"><italic>Tox<sub>i</sub>(c<sub>j</sub>)<sub>r</sub></italic>:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            <input type="text" class="form-control" id="val10" name="val10" >
           </div></div></div>
-          
-          <a href="#" class="btn btn-primary ">Test for toxicity</a>
+          <button class="btn btn-primary" type="submit">Test for toxicity</button>
+          <!-- <a href="{% url 'predict' %}" class="btn btn-primary ">Test for toxicity</a> -->
         </div>
       </div>
+      </form>
     </div>
 
     <div class="col-sm-6">
       <div class="card">
+        <div class="card-header">
+          Machine Learning Algorithm Used
+        </div>
         <div class="card-body">
-          <h5 class="card-title">Results</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <h5 class="card-title"> Extreme Gradient Boosting </h5>
+          <p class="card-text"> 
+            <p class="test-justify">
+            Extreme Gradient Boosting (XGBoost) is an open-source library that provides efficient
+            implementation of gradient boosting. It is a tree-based algorithm that can be
+            used for classification and also regression problems. In XGBoost, trees are built in
+            parallel, unlike in most gradient boosting algorithms where its is built sequentially.
+            Generally, XGBoost is an algorithm that build models by combining the predictive power
+            of multiple weaker ones in order to output a highly accurate prediction and improve the
+            robustness of the models.</p></p>
+          <table>
+            <!-- <tr>
+              <td>
+                {{val1}}
+              </td>
+              <td>
+                {{val2}}
+              </td>
+            </tr> -->
+          </table>
+          <p class="card-text"></p>
+          
+          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
       </div>
     </div>

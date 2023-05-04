@@ -1,0 +1,51 @@
+{% extends 'nanotest/navbar.html' %}
+{% load static %}
+{% block content %} 
+
+<br>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Definition of Terms and Concepts
+                </div>
+                <div class="card-body">
+                  <div class="card-title">
+                    <h6>QSAR Modeling</h6> 
+                  </div>
+                  <p class="card-text"> The concept of QSAR modeling is that physiological activity of particles can be in-
+                    ferred from their associated chemical compositions. In this context, toxic effects of
+                    nanoparticles can be modelled as a function of molecular descriptors that a nanoparticles
+                    has. Molecular descriptors are the physicochemical properties of a molecule, this include
+                    their molar volume, electronegativity, polarizability, size, spectral moments, etc..
+                  </p>
+                  <div class="card-title">
+                    <h6>Perturbation Theory</h6> 
+                  </div>
+                  <p class="card-text"> Perturbation theory is a method used to improve an approximation by calculating errors
+                    or deviations from an initial solution. 
+                  </p>
+                  <div class="card-title">
+                    <h6>QSAR-PT Modeling</h6> 
+                  </div>
+                  <p class="card-text"> QSAR-Perturbation model or PT-QSAR model is the resulting technique of integrating
+                    the perturbation theory in classic QSAR modeling. Using this model, the limitation
+                    of classic QSAR was addressed. By generating NP-NP pairs, the classification of the
+                    NPs are extended to consider the different experimental conditions it is under and the
+                    several bio-target they are tested against
+                  </p>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <img src="{% static 'img/about.jpg' %}" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+
+  </div>
+
+
+{%endblock%}

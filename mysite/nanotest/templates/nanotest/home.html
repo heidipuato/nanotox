@@ -1,5 +1,31 @@
-{% extends 'nanotest/navbar.html' %}
+{% extends 'nanotest/heading.html' %}
+{% load static %}
 {% block content %} 
+
+<br>
+<br>
+<br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body">
+                  <p class="card-text">Nanotoxicity testing is an important step in the creation of nanomaterials to ensure 
+                    that these materials are safe and not harmful to their intended biological entity, as well as to the environment.
+                  </p>
+                  <p class="card-text">In this application, using machine learning models, we created a nanotoxicity tester for convenient testing of nanoparticles.
+                    By combining the concepts of QSAR modeling and Perturbation Theory, we came up with an application that could help predict the toxicological profile of a nanoparticle.
+                  </p>
+                  <a href="{% url 'test' %}" class="btn btn-primary">Let's Test</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <img src="{% static 'img/np.webp' %}" class="img-fluid" alt="Responsive image">
+        </div>
+      </div>
+
+  </div>
 
 
 {%endblock%}
