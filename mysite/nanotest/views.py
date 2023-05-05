@@ -78,6 +78,7 @@ def predict(request):
       finalans='Your nanoparticle is NON-TOXIC'
    elif(ans==0):
       finalans = 'Your nanoparticle is TOXIC'
+   print(finalans)
    return render(request, "nanotest/result.html",{'ans':finalans,"val1":val01, "val2":val02,"val3":val03, "val4":val04,
                                                   "val5":val05, "val6":val06,"val7":val07, "val8":val08,"val9":val09, "val10":val010,})
 

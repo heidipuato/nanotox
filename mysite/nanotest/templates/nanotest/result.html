@@ -85,19 +85,63 @@
             Results
           </div>
         <div class="card-body">
-          <h5 class="card-title">Results Using XGBoost:{{ ans }} </h5>
-          <!-- <h5 class="card-title">Results ANN:{{result2}} </h5> -->
-          <table>
-            <!-- <tr>
+          {% if ans == 'Your nanoparticle is NON-TOXIC' %}
+          <h5 class="card-title">Results: <span style="color: green">{{ ans }}</span>  </h5>
+          {% else %}
+          <h5 class="card-title">Results: <span style="color: red">{{ ans }}</span>  </h5>
+          {% endif %}
+          <br>
+          <!-- <p class="card-text">  -->
+            <div class="row">
+              <div class="col">
+              <div class="mb-3">
+             <table class="table sm table-bordered">
+              <thead class="thead-info">
+                <th>
+                Performance Metrics
+                </th>
+            </thead>
+            <tbody>
+            <tr>
               <td>
-                {{val1}}
+                Accuracy: 99.8%
               </td>
+            </tr>
+            <tr>
               <td>
-                {{val2}}
+                Precision: 98.5%
               </td>
-            </tr> -->
+            </tr>
+            <tr>
+              <td>
+                Specificity: 99.8%
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Recall: 100%
+              </td>
+            </tr>
+            <tr>
+              <td>
+                F1-Score: 99.2%
+              </td>
+            </tr>
+            <tr>
+              <td>
+                AUC Score: 0.9989
+              </td>
+            </tr>
+            </tbody>
           </table>
-          <p class="card-text"></p>
+              </div></div>
+              <div class="col">
+                <div class="mb-3">
+                  <img src="https://i.pinimg.com/564x/42/82/fd/4282fda1c94584021fb28d21c1e5076a.jpg" class="img-fluid" alt="ROC CURVE image">
+                  </div>
+                  </div>
+                  </div>
+          <!-- </p> -->
           
           <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
         </div>
