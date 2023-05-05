@@ -83,32 +83,75 @@
     <div class="col-sm-6">
       <div class="card">
         <div class="card-header">
-          Machine Learning Algorithm Used
+          Descriptions of Variables
         </div>
-        <div class="card-body">
-          <h5 class="card-title"> Extreme Gradient Boosting </h5>
-          <p class="card-text"> 
-            <p class="test-justify">
-            Extreme Gradient Boosting (XGBoost) is an open-source library that provides efficient
-            implementation of gradient boosting. It is a tree-based algorithm that can be
-            used for classification and also regression problems. In XGBoost, trees are built in
-            parallel, unlike in most gradient boosting algorithms where its is built sequentially.
-            Generally, XGBoost is an algorithm that build models by combining the predictive power
-            of multiple weaker ones in order to output a highly accurate prediction and improve the
-            robustness of the models.</p></p>
-          <table>
-            <!-- <tr>
-              <td>
-                {{val1}}
-              </td>
-              <td>
-                {{val2}}
-              </td>
-            </tr> -->
-          </table>
-          <p class="card-text"></p>
-          
-          <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+        <div class="card-body" style="height: 530px; overflow: scroll;">
+          <div class="card-title">
+            <h6>DDV(m<sub>e</sub>)</h6> 
+          </div>
+          <p class="card-text"> Characterizes the change in molar volume between the NPs used in
+            the new output and reference states, considering the measures of toxic effects
+          </p>
+          <div class="card-title">
+            <h6>DDL(m<sub>e</sub>)</h6> 
+          </div>
+          <p class="card-text"> Accounts for the variation in size between the NPs used in the new
+            and reference states, considering the measures of toxic effects.
+          <div class="card-title">
+            <h6>DD<sub>&#181 1</sub>(ATO)</h6> 
+          </div>
+          <p class="card-text"> Characterizes the change in spectral moment of order 3
+            (weighted by polarizability) between the NPs used in the new and reference states,
+            with consideration of the shapes of the NPs.
+          </p>
+          <div class="card-title">
+            <h6>DD<sub>&#181 3</sub>(POL)n<sub>s</sub></h6> 
+          </div>
+          <p class="card-text"> Describes the variation in electronegativity between the NPs
+            used in the new and reference states, depending on the conditions under which
+            the sizes of the NPs were measured.
+          </p>
+          <div class="card-title">
+            <h6>DDE(d<sub>m</sub>)</h6> 
+          </div>
+          <p class="card-text"> A perturbation term that accounts for the difference in the spectral
+            moment of order 1, which is weighted by the atomic weight between the NPs
+            used in the new and reference states. This variable is influenced by the biological
+            systems involved in the analysis.
+          </p>
+          <div class="card-title">
+            <h6>DD<sub>&#181 3</sub>(VAN)t<sub>a</sub></h6> 
+          </div>
+          <p class="card-text"> Accounts for the difference in the spectral moment of order 3
+            (weighted by atomic van der Waals radius) between the NPs used in the new and
+            reference states, considering the exposure times
+          </p>
+          <div class="card-title">
+            <h6>DD<sub>&#181 2</sub>(ATO)t<sub>a</sub></h6> 
+          </div>
+          <p class="card-text"> A perturbation term describing how the spectral moment of
+            order two changes (weighted by atomic weight) between the new and reference
+            states of the NPs, accounting for the exposure times involved in the experiment.
+          <div class="card-title">
+            <h6>DG<sub>&#181 2</sub>(HYD)s<sub>c</sub></h6> 
+          </div>
+          <p class="card-text"> Represents the general spectral moment of order two weighted
+            by hydrophobicity, which accounts for the difference between the chemical
+            structures of the coating agents used in the new and reference states.
+          </p>
+          <div class="card-title">
+            <h6>DG<sub>&#181 5</sub>(PSA)s<sub>c</sub></h6> 
+          </div>
+          <p class="card-text"> Represents the general spectral moment of order five weighted
+            by polar surface area, which characterizes the difference between the chemical
+            structures of the coating agents used in the new and reference states
+          </p>
+          <div class="card-title">
+            <h6>Tox<sub>i</sub>(c<sub>j</sub>)<sub>r</sub></h6> 
+          </div>
+          <p class="card-text"> A dummy classification variable that defines the toxic impact of
+            the NP used in the reference state.
+          </p>
         </div>
       </div>
     </div>
