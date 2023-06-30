@@ -3,6 +3,10 @@ from .models import *
 from .forms import *
 import joblib
 import numpy as np
+import keras
+import tensorflow as tf
+from tensorflow.keras.models import load_model
+
 
 # Create your views here.
 def home(request):
@@ -18,7 +22,8 @@ def about(request):
     return render(request,"nanotest/about.html")
 
 def predict(request):
-   cls=joblib.load('model.sav')
+#    cls=joblib.load('xg_model.pkl')
+   cls= load_model('ann_keras_model.h5')
    lis=[]
 
    val01 = request.POST.get('val1')
@@ -67,10 +72,12 @@ def predict(request):
    print(lis)
 
    data_array = np.asarray(lis)
-   arr= data_array.reshape(1,-1)
+   arr= data_array.reshape(1,10)
    print(arr)
 
    ans = cls.predict(arr)
+   print(ans)
+   ans = (ans > 0.5)
    print(ans)
 
    finalans=''
