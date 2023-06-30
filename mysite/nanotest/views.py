@@ -3,8 +3,6 @@ from .models import *
 from .forms import *
 import joblib
 import numpy as np
-import keras
-import tensorflow as tf
 from tensorflow.keras.models import load_model
 
 
